@@ -13,5 +13,7 @@ starts **default job** in Ruby environment.
 
 ![Empty No builds](empty_travis.png)
 
-* [x] Use `script: skip` to stop Ruby environment from failing
-
+* [x] Use `script: skip` to stop Ruby environment from failing ([build #4](https://travis-ci.com/yakshaveinc/travis/builds/101115865))
+```yaml
+script: skip
+```
