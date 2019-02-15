@@ -18,7 +18,8 @@ starts **default job** in Ruby environment.
 script: skip
 ```
 
-* [ ] `language: minimal` switches from Ruby to [alternative environment](https://docs.travis-ci.com/user/languages/minimal-and-generic/) without default scripts
+* [x] `language: minimal` switches from Ruby to [alternative environment](https://docs.travis-ci.com/user/languages/minimal-and-generic/)
+without default scripts ([build #9](https://travis-ci.com/yakshaveinc/travis/builds/101122898))
 ```yaml
 language: minimal
 ```
