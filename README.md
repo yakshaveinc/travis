@@ -8,8 +8,10 @@ SOP and reference for [Travis CI](https://travis-ci.com/) setup.
 
 ### Create .travis.yml
 
-Empty .travis.yml [starts](https://travis-ci.com/yakshaveinc/travis/builds/101078477)
-**default job** in Ruby environment.
+* [x] [Empty .travis.yml](https://travis-ci.com/yakshaveinc/travis/builds/101078477)
+starts **default job** in Ruby environment.
 
 ![Empty No builds](empty_travis.png)
+
+* [x] Use `script: skip` to stop Ruby environment from failing
 
