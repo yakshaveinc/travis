@@ -2,4 +2,6 @@ language: minimal
 os:
   - linux
   - osx
-
+jobs:
+  include:
+    - script: echo $TRAVIS_OS_NAME
