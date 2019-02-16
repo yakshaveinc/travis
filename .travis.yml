@@ -4,4 +4,5 @@ os:
   - osx
 jobs:
   include:
-    - script: echo $TRAVIS_OS_NAME
+    - stage: deploy
+      script: echo $TRAVIS_OS_NAME
