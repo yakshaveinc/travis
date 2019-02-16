@@ -6,6 +6,7 @@ SOP and reference for [Travis CI](https://travis-ci.com/) setup.
 
 ![No builds](no_travis.png)
 
+
 ### Create .travis.yml
 
 * [x] [Empty .travis.yml](https://travis-ci.com/yakshaveinc/travis/builds/101078477)
@@ -26,3 +27,17 @@ language: minimal
 
 Using invalid language like [`language: none`](https://travis-ci.com/yakshaveinc/travis/jobs/178150572) or
 [misspelled](https://travis-ci.com/yakshaveinc/travis/jobs/178155333) will default to Ruby without any errors.
+
+
+### Set build matrix for parallel runs
+
+* [ ] `os` key splits execution into different os images
+```yaml
+language: minimal
+os:
+  - linux
+  - osx
+```
+https://docs.travis-ci.com/user/multi-os/
+
+
