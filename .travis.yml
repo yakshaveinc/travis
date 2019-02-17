@@ -2,7 +2,8 @@ language: minimal
 os:
   - linux
   - osx
-script: echo $TRAVIS_OS_NAME
+script: false
 jobs:
-  exclude:
-      script: echo $TRAVIS_OS_NAME
+  include:
+  - stage: deploy
+    script: echo $TRAVIS_OS_NAME
