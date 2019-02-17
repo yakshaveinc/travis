@@ -7,7 +7,7 @@ SOP and reference for [Travis CI](https://travis-ci.com/) setup.
 ![No builds](no_travis.png)
 
 
-### Create .travis.yml
+## Create .travis.yml
 
 * [x] [Empty .travis.yml](https://travis-ci.com/yakshaveinc/travis/builds/101078477)
 starts **default job** in Ruby environment.
@@ -29,7 +29,7 @@ Using invalid language like [`language: none`](https://travis-ci.com/yakshaveinc
 [misspelled](https://travis-ci.com/yakshaveinc/travis/jobs/178155333) will default to Ruby without any errors.
 
 
-### Set build matrix for parallel runs
+## Set build matrix for parallel runs
 
 * [x] `os` key splits execution of **default job** into different os images
 ([build #11](https://travis-ci.com/yakshaveinc/travis/builds/101177747))
@@ -81,3 +81,7 @@ located at `Deploy` section.
 ([build #14](https://travis-ci.com/yakshaveinc/travis/builds/101179101))
 
 ![sequential jobs](job_stage.png)
+
+If `Test` stage fails, then `Deploy` is not executed. ([build #22](https://travis-ci.com/yakshaveinc/travis/builds/101217541))
+
+![failed stage](stage_fail.png)
