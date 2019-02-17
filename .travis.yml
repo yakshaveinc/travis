@@ -4,5 +4,5 @@ os:
   - osx
 script: echo $TRAVIS_OS_NAME
 jobs:
-  include:
+  exclude:
       script: echo $TRAVIS_OS_NAME
