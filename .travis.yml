@@ -2,7 +2,7 @@ language: minimal
 os:
   - linux
   - osx
-script: false
+script: exit 1
 jobs:
   include:
   - stage: deploy
