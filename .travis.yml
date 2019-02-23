@@ -3,8 +3,8 @@ os:
   - linux
   - osx
 install: echo "Default install step"
-script: exit 0
+script: echo "Default build step"
 jobs:
   include:
   - stage: deploy
-    script: echo $TRAVIS_OS_NAME
+    script: echo "Build step from Deploy"
