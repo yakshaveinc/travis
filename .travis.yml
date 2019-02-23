@@ -2,6 +2,7 @@ language: minimal
 os:
   - linux
   - osx
+install: echo "Default install step"
 script: exit 1
 jobs:
   include:
