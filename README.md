@@ -85,3 +85,22 @@ located at `Deploy` section.
 If `Test` stage fails, then `Deploy` is not executed. ([build #22](https://travis-ci.com/yakshaveinc/travis/builds/101217541))
 
 ![failed stage](stage_fail.png)
+
+## Default `install` step is shared with stages
+
+Somewhat unexpected. For the script below, `install` section will be executed for `Deploy` stage.
+([build #14](https://travis-ci.com/yakshaveinc/travis/builds/102026699))
+
+```yaml
+language: minimal
+os:
+  - linux
+  - osx
+install: echo "Default install step"
+script: echo "Default build step"
+jobs:
+  include:
+  - stage: deploy
+    script: echo "Build step from Deploy"
+```
+
