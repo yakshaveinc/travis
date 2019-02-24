@@ -86,10 +86,10 @@ If `Test` stage fails, then `Deploy` is not executed. ([build #22](https://travi
 
 ![failed stage](stage_fail.png)
 
-## Default `install` step is shared with stages
+## Default steps (`install`, `script`) are shared with stages
 
 Somewhat unexpected. For the script below, `install` section will be executed for `Deploy` stage.
-([build #14](https://travis-ci.com/yakshaveinc/travis/builds/102026699))
+([build #27](https://travis-ci.com/yakshaveinc/travis/builds/102026699))
 
 ```yaml
 language: minimal
@@ -104,3 +104,5 @@ jobs:
     script: echo "Build step from Deploy"
 ```
 
+`scripts` steps are also shared.
+([build #29](https://travis-ci.com/yakshaveinc/travis/jobs/180080660))
