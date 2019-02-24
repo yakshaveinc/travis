@@ -7,4 +7,4 @@ script: echo "Default build step"
 jobs:
   include:
   - stage: deploy
-    script: echo "Build step from Deploy"
+    install: echo "Install step from Deploy"
