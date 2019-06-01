@@ -106,3 +106,16 @@ jobs:
 
 `scripts` steps are also shared.
 ([build #29](https://travis-ci.com/yakshaveinc/travis/jobs/180080660))
+
+```yaml
+language: minimal
+os:
+  - linux
+  - osx
+install: skip echo "Default install step"
+script: echo "Default build step"
+jobs:
+  include:
+  - stage: deploy
+    install: echo "Install step from Deploy"
+```
