@@ -1,11 +1,6 @@
 language: minimal
-os:
-  - linux
-  - osx
-install: echo "Default install step"
-script: echo "Default build step"
+
 jobs:
   include:
   - stage: deploy
-    install: echo "Install step from Deploy"
-    script: skip
+
