@@ -8,3 +8,4 @@ jobs:
   include:
   - stage: deploy
     install: echo "Install step from Deploy"
+    script: skip
