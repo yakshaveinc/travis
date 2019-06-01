@@ -1,7 +1,9 @@
 language: minimal
 
+dist: xenial
+
 jobs:
   include:
-  - stage: build snap with snapcraft on default Ubuntu 14.04
+  - stage: build snap with snapcraft on Ubuntu 16.04 (xenial)
     install: cat /etc/os-release
     script: snapcraft --version && snapcraft
