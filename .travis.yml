@@ -1,10 +1,7 @@
 language: minimal
-os:
-  - linux
-  - osx
-install: echo "Default install step"
-script: echo "Default build step"
+
 jobs:
   include:
-  - stage: deploy
-    install: echo "Install step from Deploy"
+  - stage: build snap with snapcraft on default Ubuntu 14.04
+    install: cat /etc/os-release
+    script: snapcraft --version && snapcraft
