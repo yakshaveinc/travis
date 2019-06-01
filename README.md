@@ -119,3 +119,19 @@ jobs:
   - stage: deploy
     install: echo "Install step from Deploy"
 ```
+
+Use explicit `script: skip` to avoid surprises. ([build #32](https://travis-ci.com/yakshaveinc/travis/jobs/204688182))
+
+```yaml
+language: minimal
+os:
+  - linux
+  - osx
+install: echo "Default install step"
+script: echo "Default build step"
+jobs:
+  include:
+  - stage: deploy
+    install: echo "Install step from Deploy"
+    script: skip
+```
