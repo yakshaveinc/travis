@@ -135,3 +135,22 @@ jobs:
     install: echo "Install step from Deploy"
     script: skip
 ```
+
+## Use stages instead of build matrix for parallel runs
+
+Travis has a gotcha that stage name is merged with the entry of the first job. The following snippet actually defines two jobs.
+```
+jobs:
+  include:
+    - stage: test
+    - script: deploy
+```
+Corrected syntax.
+```
+jobs:
+  include:
+    - stage: test
+      script: deploy
+```
+
+https://travis-ci.community/t/adding-name-changes-build-jobs/2982/2
