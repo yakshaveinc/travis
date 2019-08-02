@@ -138,14 +138,14 @@ jobs:
 
 ## Use stages instead of build matrix for parallel runs
 
-Travis has a gotcha that stage name is merged with the entry of the first job. The following snippet actually defines two jobs.
+When using stages, it is possible to see Travis running extra empty job as a first job in a stage. At first they might seem like default jobs that are build by Traves. But it could also be mistake in specifying stage name as a separate entry. The following snippet actually defines two jobs.
 ```
 jobs:
   include:
     - stage: test
-    - script: deploy
+    - script: echo "Hello"
 ```
-Corrected syntax.
+Travis syntax requires that the stage name is merged with the entry of the first job. Corrected syntax.
 ```
 jobs:
   include:
