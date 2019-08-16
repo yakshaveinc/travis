@@ -138,7 +138,7 @@ jobs:
 
 ## Use stages instead of build matrix for parallel runs
 
-When using stages, it is possible to see Travis running extra empty job as a first job in a stage. At first they might seem like default jobs that are build by Traves. But it could also be mistake in specifying stage name as a separate entry. The following snippet actually defines two jobs.
+When using stages, it is possible to see Travis running extra empty job as a first job in a stage. At first they might seem like default jobs that are built by Travis. But it could also be mistake in specifying stage name as a separate entry. The following snippet actually defines two jobs, and the first job runs default script command.
 ```
 jobs:
   include:
