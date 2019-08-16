@@ -1,7 +1,14 @@
 language: minimal
 
-# single stage that runs default "script: bash -c 'echo $BASH_VERSION'"
+stages:
+  - build
+  - deploy
 
 jobs:
   include:
+    - stage: build
+      script: echo "doing nothing"
+
+    # deploy stage doesn't define own script: and runs
+    # default implicit "script: bash -c 'echo $BASH_VERSION'"
     - stage: deploy
