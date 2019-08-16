@@ -1,6 +1,8 @@
 language: minimal
 
-# single stage that runs default "script: bash -c 'echo $BASH_VERSION'"
+# single stage that doesn't run anything. command with bash version
+# that can be seen in Travis as "bash -c 'echo $BASH_VERSION'" is a
+# part of Travis debug output
 
 jobs:
   include:
