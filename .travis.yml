@@ -9,6 +9,7 @@ jobs:
     - stage: build
       script: echo "doing nothing"
 
-    # deploy stage doesn't define own script: and runs
-    # default implicit "script: bash -c 'echo $BASH_VERSION'"
+    # deploy stage doesn't define own script: and there is
+    # no default script: at the root level, and therefore
+    # nothing is run at this stage
     - stage: deploy
